@@ -25,6 +25,7 @@ Route::group(['prefix' => 'site'], function () {
 
 
 Route::group(['prefix' => 'admin'], function () {
+    Route::post('login', 'Admin\AuthController@login');
     Route::get('article', 'Admin\ArticleController@index');
     Route::get('article/{id}', 'Admin\ArticleController@find');
     Route::post('article', 'Admin\ArticleController@store');
