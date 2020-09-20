@@ -21,13 +21,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['prefix' => 'site'], function () {
     Route::get('getArticles', 'ArticleController@index');
     Route::get('getArticle/{id}', 'ArticleController@show');
+
+    Route::post('contact', 'ContactController@store');
 });
 
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], function () {
     Route::post('login', 'Admin\AuthController@login');
     Route::get('article', 'Admin\ArticleController@index');
     Route::get('article/{id}', 'Admin\ArticleController@find');
     Route::post('article', 'Admin\ArticleController@store');
+    Route::get('atricleChangeStatus/{id}', 'Admin\ArticleController@changeStatus');
+
+
+    // contact
+    Route::get('contacts', 'Admin\ContactUsController@index');
 });
 

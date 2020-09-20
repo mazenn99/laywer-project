@@ -18,7 +18,6 @@ class CreateArticlesTable extends Migration
             $table->string('image');
             $table->string('subject');
             $table->string('author');
-            $table->string('date');
             $table->longText('text');
             $table->boolean('active');
             $table->unsignedBigInteger('type_id')->nullable();

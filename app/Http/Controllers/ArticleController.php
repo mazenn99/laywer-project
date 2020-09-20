@@ -26,9 +26,11 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show($id)
     {
+        $article = Article::with('user','type')->find($id);
         return response()->json(['resourceCode' => '100', 'resourceMessage' => 'success', 'data' => $article]);
+        // return response()->json(['resourceCode' => '100', 'resourceMessage' => 'success', 'data' => $article]);
     }
 
     /**
