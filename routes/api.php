@@ -17,3 +17,16 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['prefix' => 'site'], function () {
+    Route::get('getArticles', 'ArticleController@index');
+    Route::get('getArticle/{id}', 'ArticleController@show');
+});
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('article', 'Admin\ArticleController@index');
+    Route::get('article/{id}', 'Admin\ArticleController@find');
+    Route::post('article', 'Admin\ArticleController@store');
+});
+

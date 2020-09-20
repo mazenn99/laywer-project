@@ -20,9 +20,12 @@ class CreateArticlesTable extends Migration
             $table->string('author');
             $table->string('date');
             $table->longText('text');
-
+            $table->boolean('active');
             $table->unsignedBigInteger('type_id')->nullable();
             $table->foreign('type_id')->references('id')->on('types')->onDelete('set null');
+
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
 
             $table->timestamps();
         });

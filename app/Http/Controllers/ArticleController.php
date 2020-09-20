@@ -14,29 +14,11 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::with('user','type')->where('active',1)->paginate(5);
+        return response()->json(['resourceCode' => '100', 'resourceMessage' => 'success', 'data' => $articles]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+    
 
     /**
      * Display the specified resource.
@@ -46,7 +28,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return response()->json(['resourceCode' => '100', 'resourceMessage' => 'success', 'data' => $article]);
     }
 
     /**
