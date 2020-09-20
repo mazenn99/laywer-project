@@ -21,8 +21,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['prefix' => 'site'], function () {
     Route::get('getArticles', 'ArticleController@index');
     Route::get('getArticle/{id}', 'ArticleController@show');
-
+    // contact
     Route::post('contact', 'ContactController@store');
+    // news
+    Route::get('news', 'NewsController@index');
 });
 
 
@@ -32,9 +34,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], function () {
     Route::get('article/{id}', 'Admin\ArticleController@find');
     Route::post('article', 'Admin\ArticleController@store');
     Route::get('atricleChangeStatus/{id}', 'Admin\ArticleController@changeStatus');
-
-
     // contact
     Route::get('contacts', 'Admin\ContactUsController@index');
+    // news
+    Route::get('news', 'Admin\NewsController@index');
+    Route::post('news', 'Admin\NewsController@store');
+    Route::put('news', 'Admin\NewsController@update');
 });
 
