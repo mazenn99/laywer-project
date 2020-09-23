@@ -18,4 +18,9 @@ class NewsController extends Controller
         return response()->json(['resourceCode' =>100, 'resourceMessage' => 'success', 'data' => $news]);
     }
 
+    // getAll
+    public function get()
+    {
+        return News::where('active', 1)->get();
+    }
 }
