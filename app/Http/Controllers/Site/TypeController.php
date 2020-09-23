@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
+use App\Models\Type;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class AboutController extends Controller
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class AboutController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\About  $about
+     * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function show(About $about)
+    public function show(Type $type)
     {
         //
     }
@@ -52,10 +53,10 @@ class AboutController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\About  $about
+     * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function edit(About $about)
+    public function edit(Type $type)
     {
         //
     }
@@ -64,10 +65,10 @@ class AboutController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\About  $about
+     * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, About $about)
+    public function update(Request $request, Type $type)
     {
         //
     }
@@ -75,10 +76,10 @@ class AboutController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\About  $about
+     * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function destroy(About $about)
+    public function destroy(Type $type)
     {
         //
     }

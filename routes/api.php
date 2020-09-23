@@ -53,5 +53,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], function () {
     // orders
     Route::get('orders', 'Admin\OrderController@index');
     Route::get('ordersChangeStatus/{id}', 'Admin\OrderController@changeStatus');
+    // Report
+    Route::get('reports', 'Admin\ReportController@index');
+    Route::get('reportsChangeStatus/{id}', 'Admin\ReportController@changeStatus');
+    Route::post('reports', 'Admin\ReportController@store');
+    Route::put('reports/{id}', 'Admin\ReportController@update');
 });
 
