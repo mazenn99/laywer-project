@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Site;
 
 use Validator;
 use App\Models\Contact;
@@ -22,6 +22,7 @@ class ContactController extends Controller
             return response()->json($validator->messages(), 200);
         }
         $data = $request->all();
+        $data['active'] = 0;
         Contact::create($data);
         return response()->json(['resourceCode' => 100, 'resourceMessage' => 'success']);
     }

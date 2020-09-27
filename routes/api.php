@@ -19,12 +19,25 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'site'], function () {
-    Route::get('getArticles', 'ArticleController@index');
-    Route::get('getArticle/{id}', 'ArticleController@show');
+    Route::get('getArticles/{typeId}', 'Site\ArticleController@index');
+    Route::get('getNews', 'Site\ArticleController@getNews');
+    Route::get('getSystem', 'Site\ArticleController@getSystem');
+    Route::get('getArticle/{id}', 'Site\ArticleController@show');
     // contact
-    Route::post('contact', 'ContactController@store');
+    Route::post('contact', 'Site\ContactController@store');
     // news
-    Route::get('news', 'NewsController@index');
+    Route::get('news', 'Site\NewsController@index');
+    Route::get('about', 'Site\AboutController@index');
+    // Orders 
+    Route::post('order', 'Site\OrderController@store');
+
+    // Report
+    Route::get('reports', 'Site\ReportController@index');
+    // Download file
+    Route::get('downlaodFile/{id}', 'Site\ReportController@downloadFile');
+
+    // editPassword
+    Route::post('editPassword', 'Site\AuthController@editPassword');
 });
 
 

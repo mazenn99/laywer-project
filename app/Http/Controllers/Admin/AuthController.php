@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -40,5 +41,39 @@ class AuthController extends Controller
             'username' => Auth::user()->user_name,
             'email' => Auth::user()->email
         ]);
+    }
+
+
+
+    // edit Password
+    public function editPassword(Request $request)
+    {
+        \App::setLocale($request->lng);
+
+        if (!(Hash::check($request->oldPassword, Auth::user()->password))) {
+            // The passwords matches
+            return response()->json(['resentCode' =>105 , 'resentMessage' => 'success'],400);
+        }
+        if(strcmp($request->oldPassword, $request->newPassword) == 0){
+            //Current password and new password are same
+            return response()->json(['resentCode' =>105 , 'resentMessage' => 'success'],400);
+        }
+
+        // Validation
+        $validator = Validator::make($request->all(), [
+            'oldPassword' => 'required|string',
+            'newPassword' => 'required|string',
+            'confirmPassword' => 'required|string|same:newPassword'
+        ]);
+        
+        if ($validator->fails()) {
+            return Response()->json(['responseCode' => '102','responseMessage'=> 'error', 'error' => $validator->errors()],400);
+        }
+
+        $user = Auth::user();
+        $user->password = bcrypt($request->newPassword);
+        $user->save();
+
+        return response()->json(['resentCode' =>100 , 'resentMessage' => Lang::get('messages.success')]);
     }
 }

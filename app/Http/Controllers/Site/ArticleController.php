@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Site;
 
+use Carbon\Carbon;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -13,23 +14,22 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($typeId)
     {
-        $articles = Article::with('user','type')->where('active',1)->paginate(5);
+        $articles = Article::where('type_id', $typeId)->with('user','type')->where('active',1)->paginate(3);
+        $articles->map(function($article){
+            $article->image = config('app.url').'article/'.$article->image;
+            $newDate = date("d-m-Y", strtotime($article->created_at));  
+            $article->date = $newDate;
+        });
         return response()->json(['resourceCode' => '100', 'resourceMessage' => 'success', 'data' => $articles]);
     }
-
     
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Article  $article
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $article = Article::with('user','type')->find($id);
+        $article->image = config('app.url').'article/'.$article->image;
+        $article->date = date("d-m-Y", strtotime($article->created_at)); 
         return response()->json(['resourceCode' => '100', 'resourceMessage' => 'success', 'data' => $article]);
         // return response()->json(['resourceCode' => '100', 'resourceMessage' => 'success', 'data' => $article]);
     }

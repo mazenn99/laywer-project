@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Site;
 
 use App\Models\News;
 use Illuminate\Http\Request;
@@ -15,7 +15,10 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = News::get();
+        $news = News::get()->map(function($new){
+            $new->date =  date("d-m-Y", strtotime($new->created_at)); 
+            return $new;
+        });
         return response()->json(['resourceCode' =>100, 'resourceMessage' => 'success', 'data' => $news]);
     }
 
