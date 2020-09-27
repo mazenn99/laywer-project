@@ -38,7 +38,8 @@ Route::group(['prefix' => 'site'], function () {
     // editPassword
     Route::post('editPassword', 'Site\AuthController@editPassword');
     // get service
-    Route::get('servies', 'Site\ServiceController@index');
+    Route::get('services', 'Site\ServiceController@index');
+    Route::get('service/{id}', 'Site\ServiceController@find');
 });
 
 
