@@ -85,7 +85,7 @@ class ArticleController extends Controller
         $article->author    = $request->author ;
         $article->subject   = $request->subject ;
         $article->type_id   = $request->type_id ;
-        $article->text      = $request-> text;
+        $article->text      = $request->text;
 
         if ($request->hasFile('image')) {
             $file = $request->image;

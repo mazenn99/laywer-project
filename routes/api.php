@@ -35,9 +35,10 @@ Route::group(['prefix' => 'site'], function () {
     Route::get('reports', 'Site\ReportController@index');
     // Download file
     Route::get('downlaodFile/{id}', 'Site\ReportController@downloadFile');
-
     // editPassword
     Route::post('editPassword', 'Site\AuthController@editPassword');
+    // get service
+    Route::get('servies', 'Site\ServiceController@index');
 });
 
 
@@ -71,5 +72,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], function () {
     Route::get('reportsChangeStatus/{id}', 'Admin\ReportController@changeStatus');
     Route::post('reports', 'Admin\ReportController@store');
     Route::put('reports/{id}', 'Admin\ReportController@update');
+    // Service
+    // news
+    Route::get('servie', 'Admin\ServiceController@index');
+    Route::get('servieChangeStatus/{id}', 'Admin\ServiceController@changeStatus');
+    Route::post('servie', 'Admin\ServiceController@store');
+    Route::put('servie/{id}', 'Admin\ServiceController@update');
 });
 
