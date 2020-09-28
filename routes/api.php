@@ -40,6 +40,8 @@ Route::group(['prefix' => 'site'], function () {
     // get service
     Route::get('services', 'Site\ServiceController@index');
     Route::get('service/{id}', 'Site\ServiceController@find');
+    // specialties
+    Route::get('specialties', 'Site\SpecialtiesController@index');
 });
 
 
@@ -74,10 +76,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], function () {
     Route::post('reports', 'Admin\ReportController@store');
     Route::put('reports/{id}', 'Admin\ReportController@update');
     // Service
-    // news
     Route::get('servie', 'Admin\ServiceController@index');
     Route::get('servieChangeStatus/{id}', 'Admin\ServiceController@changeStatus');
     Route::post('servie', 'Admin\ServiceController@store');
     Route::put('servie/{id}', 'Admin\ServiceController@update');
+    // Service
+    Route::get('specialties', 'Admin\SpecialtiesController@index');
+    Route::get('specialtiesChangeStatus/{id}', 'Admin\SpecialtiesController@changeStatus');
+    Route::post('specialties', 'Admin\SpecialtiesController@store');
+    Route::put('specialties/{id}', 'Admin\SpecialtiesController@update');
 });
 
