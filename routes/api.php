@@ -85,5 +85,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], function () {
     Route::get('specialtiesChangeStatus/{id}', 'Admin\SpecialtiesController@changeStatus');
     Route::post('specialties', 'Admin\SpecialtiesController@store');
     Route::put('specialties/{id}', 'Admin\SpecialtiesController@update');
+    // Service
+    Route::get('link', 'Admin\LinkController@index');
+    Route::get('linkChangeStatus/{id}', 'Admin\LinkController@changeStatus');
+    Route::post('link', 'Admin\LinkController@store');
+    Route::put('link/{id}', 'Admin\LinkController@update');
 });
 
