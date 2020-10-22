@@ -24,7 +24,7 @@ class LinkController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string',
+            'text' => 'required|string',
             'link' => 'required|string',
         ]);
         if($validator->fails()){
@@ -44,14 +44,14 @@ class LinkController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string',
+            'text' => 'required|string',
             'link' => 'required|string',
          ]);
         if($validator->fails()){
             return response()->json($validator->messages(), 200);
         }
         $link = $this->find($id);
-        $link->name = $request->name;
+        $link->text = $request->text;
         $link->link = $request->link;
         $link->update();
         $this->index();
