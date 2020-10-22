@@ -42,6 +42,8 @@ Route::group(['prefix' => 'site'], function () {
     Route::get('service/{id}', 'Site\ServiceController@find');
     // specialties
     Route::get('specialties', 'Site\SpecialtiesController@index');
+    // Service
+    Route::get('links', 'Site\LinkController@index');
 });
 
 
