@@ -13,6 +13,7 @@ class Link extends Model
         'text',
         'link',
         'active',
-        'user_id'
+        'user_id',
+        'title'
     ];
 }

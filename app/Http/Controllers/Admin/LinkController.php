@@ -27,6 +27,7 @@ class LinkController extends Controller
         $validator = Validator::make($request->all(), [
             'text' => 'required|string',
             'link' => 'required|string',
+            'title' => 'required|string',
         ]);
         if($validator->fails()){
             return response()->json($validator->messages(), 200);
@@ -47,6 +48,7 @@ class LinkController extends Controller
         $validator = Validator::make($request->all(), [
             'text' => 'required|string',
             'link' => 'required|string',
+            'title' => 'required|string',
          ]);
         if($validator->fails()){
             return response()->json($validator->messages(), 200);
@@ -54,6 +56,7 @@ class LinkController extends Controller
         $link = $this->find($id);
         $link->text = $request->text;
         $link->link = $request->link;
+        $link->title= $request->title;
         $link->update();
         $this->index();
     }
