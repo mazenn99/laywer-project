@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Validator;
 use App\Models\Link;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
