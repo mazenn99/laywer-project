@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aac54ffe-3468-4894-a34e-8b5b2c4feddc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/article/a437796d8fdf33daca13a8eff9d9f444.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/article/a9eafda96ad8e98f5767a3a496bacafb.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/article/fb8214620b086eebf4675ce9cac387d8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/reports/931ca48ef63ef4d13d40ba7bb5442d0c.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/servies/ab94f9fe1355fc30dc9ee6773676ff20.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/servies/d8d2fd83d88fc9693791382697979a29.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/specialties/091bcd8823799dc4cc4a43c3e5aff950.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/specialties/9f7d9ff2220d6154b4759c2f4941d702.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/specialties/c89c54d2bb9d2426e18a38d9ec8f6f15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/passwords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="aac54ffe-3468-4894-a34e-8b5b2c4feddc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +177,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605460580679</updated>
       <workItem from="1605460581760" duration="2631000" />
-      <workItem from="1605550789675" duration="9711000" />
+      <workItem from="1605550789675" duration="10296000" />
     </task>
     <servers />
   </component>
