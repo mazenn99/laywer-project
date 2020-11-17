@@ -40,12 +40,12 @@
     <section class="banner_area banner_one" style="direction: rtl;">
         <div class="container">
             <div class="banner_content">
-                <h3>المقالات</h3>
+                <h3>أخبار قانونية</h3>
             </div>
             <div class="banner_link">
                 <div class="abnner_link_inner">
                     <a class="active" href="index.html">الرئيسية</a>
-                    <a href="blog.html">المقالات</a>
+                    <a href="blog.html">أخبار قانونية</a>
                 </div>
             </div>
         </div>

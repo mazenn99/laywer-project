@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aac54ffe-3468-4894-a34e-8b5b2c4feddc" name="Default Changelist" comment="" />
+    <list default="true" id="aac54ffe-3468-4894-a34e-8b5b2c4feddc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/Visitor/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/Visitor/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/visitor/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/visitor/blog.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/visitor/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/visitor/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/visitor/law-news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/visitor/law-news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,7 +155,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../مجلد جديد" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -177,7 +188,9 @@
       <option name="presentableId" value="Default" />
       <updated>1605460580679</updated>
       <workItem from="1605460581760" duration="2631000" />
-      <workItem from="1605550789675" duration="10621000" />
+      <workItem from="1605550789675" duration="10873000" />
+      <workItem from="1605611538416" duration="77000" />
+      <workItem from="1605627268119" duration="11457000" />
     </task>
     <servers />
   </component>
@@ -185,17 +198,26 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2554" y="174" key="FileChooserDialogImpl" timestamp="1605555826551">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="634" y="174" key="FileChooserDialogImpl" timestamp="1605611665935">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="2554" y="174" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605555826551" />
-    <state x="2705" y="430" key="NewPhpFileDialog" timestamp="1605558316517">
+    <state x="634" y="174" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1605611665935" />
+    <state x="2705" y="430" key="NewPhpFileDialog" timestamp="1605633047423">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2705" y="430" key="NewPhpFileDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605558316517" />
-    <state x="2513" y="126" width="734" height="828" key="find.popup" timestamp="1605462454462">
+    <state x="2705" y="430" key="NewPhpFileDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605633047423" />
+    <state x="2513" y="126" width="734" height="920" key="find.popup" timestamp="1605638562031">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2513" y="126" width="734" height="828" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605462454462" />
+    <state x="2513" y="126" width="734" height="920" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605638562031" />
+    <state x="2368" y="242" key="run.anything.popup" timestamp="1605638087348">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2368" y="242" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605638087348" />
+    <state x="2373" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1605639663209">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2373" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605639663209" />
   </component>
 </project>

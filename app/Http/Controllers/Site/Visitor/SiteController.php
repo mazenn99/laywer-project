@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site\Visitor;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -36,7 +37,8 @@ class SiteController extends Controller
     }
 
     public function blogs() {
-        return view('visitor.blog');
+        $articles = Article::orderBy('id' , 'DESC')->get();
+        return view('visitor.blog' , compact('articles'));
     }
 
     public function lawNews() {

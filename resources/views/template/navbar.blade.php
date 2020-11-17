@@ -105,7 +105,7 @@
                                 <li><a href="{{route('laws')}}">أنظمة وقوانين</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">خدماتنا</a></li>
+                        <li><a href="{{route('services')}}">خدماتنا</a></li>
                         <li><a href="{{route('about')}}">من نحن</a></li>
                         <li><a href="{{route('home')}}">الرئيسية</a></li>
 

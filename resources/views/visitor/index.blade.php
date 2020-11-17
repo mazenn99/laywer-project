@@ -515,7 +515,7 @@
                                     <a href="#" class="circle-btn">
                                         <img src="img/icon/right-arrow-black.png" alt="right-arrow">
                                     </a>-->
-                                    <a href="#" class="circle-btn">
+                                    <a href="api/site/getArticle/12" class="circle-btn">
                                         <img src="{{asset('visitor')}}/img/icon/right-arrow-black.png" alt="right-arrow">
                                     </a>
                                 </div>
@@ -535,7 +535,7 @@
                                     <a href="#" class="circle-btn">
                                         <img src="img/icon/right-arrow-black.png" alt="right-arrow">
                                     </a>-->
-                                    <a href="#" class="circle-btn">
+                                    <a href="api/site/getArticle/11" class="circle-btn">
                                         <img src="{{asset('visitor')}}/img/icon/right-arrow-black.png" alt="right-arrow">
                                     </a>
                                 </div>
@@ -555,7 +555,7 @@
                                     <a href="#" class="circle-btn">
                                         <img src="img/icon/right-arrow-black.png" alt="right-arrow">
                                     </a>-->
-                                    <a href="#" class="circle-btn">
+                                    <a href="api/site/getArticle/10" class="circle-btn">
                                         <img src="{{asset('visitor')}}/img/icon/right-arrow-black.png" alt="right-arrow">
                                     </a>
                                 </div>
@@ -575,7 +575,7 @@
                                     <a href="#" class="circle-btn">
                                         <img src="img/icon/right-arrow-black.png" alt="right-arrow">
                                     </a>-->
-                                    <a href="#" class="circle-btn">
+                                    <a href="api/site/getArticle/9" class="circle-btn">
                                         <img src="{{asset('visitor')}}/img/icon/right-arrow-black.png" alt="right-arrow">
                                     </a>
                                 </div>
@@ -583,7 +583,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="service.html" class="btn btn-primary btn-block  lighter" style="background: #cca858;padding: 12px; color: #fff;border-color:#cca858;margin-top: 35px;"> اطلع علي المزيد من خدماتنا من هنا</a>
+                <a href="{{route('services')}}" class="btn btn-primary btn-block  lighter" style="background: #cca858;padding: 12px; color: #fff;border-color:#cca858;margin-top: 35px;"> اطلع علي المزيد من خدماتنا من هنا</a>
             </div>
         </div>
     </div>

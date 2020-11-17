@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Site\VisitorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::group(['prefix' => 'site'], function () {
-    Route::get('getArticles/{typeId}', 'Site\ArticleController@index');
+    Route::get('getArticles/{typeId}', 'Site\ArticleController@index')->name('get-article');
     Route::get('getNews', 'Site\ArticleController@getNews');
     Route::get('getSystem', 'Site\ArticleController@getSystem');
     Route::get('getArticle/{id}', 'Site\ArticleController@show');
@@ -51,6 +50,7 @@ Route::group(['prefix' => 'site'], function () {
 
 Route::post('admin/login', 'Admin\AuthController@login');
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], function () {
+
     Route::get('article', 'Admin\ArticleController@index');
     Route::get('article/{id}', 'Admin\ArticleController@find');
     Route::post('article', 'Admin\ArticleController@store');
