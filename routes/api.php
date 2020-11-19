@@ -37,7 +37,7 @@ Route::group(['prefix' => 'site'], function () {
     // Download file
     Route::get('downlaodFile/{id}', 'Site\ReportController@downloadFile');
     // editPassword
-//    Route::post('editPassword', 'Site\AuthController@editPassword');
+    Route::post('editPassword', 'Site\AuthController@editPassword');
     // get service
     Route::get('services', 'Site\ServiceController@index');
     Route::get('service/{id}', 'Site\ServiceController@find');
@@ -48,7 +48,7 @@ Route::group(['prefix' => 'site'], function () {
 });
 
 
-//Route::post('admin/login', 'Admin\AuthController@login');
+Route::post('admin/login', 'Admin\AuthController@login');
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], function () {
 
     Route::get('article', 'Admin\ArticleController@index');

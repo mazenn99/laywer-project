@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aac54ffe-3468-4894-a34e-8b5b2c4feddc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/apis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/apis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/Visitor/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/Visitor/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/template/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/visitor/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/visitor/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/visitor/services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/visitor/services.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +184,7 @@
       <workItem from="1605611538416" duration="77000" />
       <workItem from="1605627268119" duration="11563000" />
       <workItem from="1605731787476" duration="68000" />
-      <workItem from="1605785736436" duration="7407000" />
+      <workItem from="1605785736436" duration="8165000" />
     </task>
     <servers />
   </component>
