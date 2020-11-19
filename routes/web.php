@@ -28,4 +28,15 @@ Route::group(['namespace' => 'Site\Visitor'], function () {
     Route::get('law-news' , [SiteController::class , 'lawNews'])->name('lawNews');
     Route::get('laws' , [SiteController::class , 'laws'])->name('laws');
     Route::get('our-services' , [SiteController::class , 'ourServices'])->name('our-services');
+    Route::get('single-news/{id}' , [SiteController::class , 'singleNews'])->name('single-news');
+    Route::get('facility-news' , [SiteController::class , 'facilityNews'])->name('facility-news');
+    Route::post('sendEmail' , [SiteController::class , 'sendEmail'])->name('sendEmail');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

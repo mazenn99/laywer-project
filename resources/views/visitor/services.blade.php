@@ -81,7 +81,27 @@
     <section class="service_page" style="direction: rtl;">
         <div class="container">
             <div class="row service_item_inner">
-                <!-- show service -->
+                @foreach($services as $service)
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="newsblog-group" style="height: 500px;margin-bottom: 15px;">
+                            <div class="newsblog-imgpanel">
+                                <img src="{{$service->image}}" alt="camera-article"
+                                     style="width:370px;height:259px">
+                                <span class="newsblog-date" style="height: 40px;"><small>{{$service->created_at}}</small></span>
+                            </div>
+                            <div class="newsblog-conents">';
+                                <ul class="newsblog-info">
+                                    <li> {{$service->subject}}</li>
+
+{{--                                    <li>{{$service->author}}</li>--}}
+                                </ul>
+
+                                <h3> {{substr($service->text , 0 , 30)}} ... <a
+                                        href="api/site/getArticle/{{$service->id}}"
+                                        class="theme-btn btn-sm"> اقرا المزيد</a></h3></div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
 
             <nav aria-label="Page navigation" class="blog_pagination">
@@ -195,46 +215,46 @@
 
     <!--================End Service Area =================-->
 @section('script')
-    <script>
-        $(document).ready(function () {
-            getData()
-        });
+{{--    <script>--}}
+{{--        $(document).ready(function () {--}}
+{{--            getData()--}}
+{{--        });--}}
 
-        function getData(page = 1) {
-            $.ajax({
-                /* the route pointing to the post function */
-                url: 'https://law.apis.dokan.notjustapage.com/api/site/links',
-                type: 'get',
-                /* send the csrf-token and the input to the controller */
-                // data: {_token: CSRF_TOKEN, name:$("#name").val(),date:$("#date").val(),time:$("#time").val()},
-                dataType: 'JSON',
-                /* remind that 'data' is the response of the AjaxController */
-                success: function (response) {
-                    console.log(response.data)
-                    var result = '';
-                    var option = '';
-                    for (var item in response.data) {
-                        result += '<div class="col-md-4 col-sm-6 col-xs-12 " style="float: right;"><div class="link-style  animated wow fadeInUp">';
-                        result += '<a href="' + response.data[item].link + '">';
-                        result += '<h4>' + response.data[item].title + '</h4>';
-                        result += '<p>' + response.data[item].text + '</p>';
-                        result += '</a></div></div>';
-                    }
+{{--        function getData(page = 1) {--}}
+{{--            $.ajax({--}}
+{{--                /* the route pointing to the post function */--}}
+{{--                url: 'https://law.apis.dokan.notjustapage.com/api/site/links',--}}
+{{--                type: 'get',--}}
+{{--                /* send the csrf-token and the input to the controller */--}}
+{{--                // data: {_token: CSRF_TOKEN, name:$("#name").val(),date:$("#date").val(),time:$("#time").val()},--}}
+{{--                dataType: 'JSON',--}}
+{{--                /* remind that 'data' is the response of the AjaxController */--}}
+{{--                success: function (response) {--}}
+{{--                    console.log(response.data)--}}
+{{--                    var result = '';--}}
+{{--                    var option = '';--}}
+{{--                    for (var item in response.data) {--}}
+{{--                        result += '<div class="col-md-4 col-sm-6 col-xs-12 " style="float: right;"><div class="link-style  animated wow fadeInUp">';--}}
+{{--                        result += '<a href="' + response.data[item].link + '">';--}}
+{{--                        result += '<h4>' + response.data[item].title + '</h4>';--}}
+{{--                        result += '<p>' + response.data[item].text + '</p>';--}}
+{{--                        result += '</a></div></div>';--}}
+{{--                    }--}}
 
-                    $('.service_item_inner').html(result)
+{{--                    $('.service_item_inner').html(result)--}}
 
 
-                    var i;
-                    var pagination = '';
-                    var checkCurrentPage = '';
-                    for (i = 1; i <= response.data.last_page; i++) {
-                        checkCurrentPage = response.data.current_page == i ? "active" : ""
-                        pagination += '<li class=' + checkCurrentPage + '><a href="#" onclick="getData(' + i + ')" id=>' + i + '</a></li>';
-                    }
-                    $('.pagination').html(pagination);
-                }
-            });
-        }
-    </script>
+{{--                    var i;--}}
+{{--                    var pagination = '';--}}
+{{--                    var checkCurrentPage = '';--}}
+{{--                    for (i = 1; i <= response.data.last_page; i++) {--}}
+{{--                        checkCurrentPage = response.data.current_page == i ? "active" : ""--}}
+{{--                        pagination += '<li class=' + checkCurrentPage + '><a href="#" onclick="getData(' + i + ')" id=>' + i + '</a></li>';--}}
+{{--                    }--}}
+{{--                    $('.pagination').html(pagination);--}}
+{{--                }--}}
+{{--            });--}}
+{{--        }--}}
+{{--    </script>--}}
 @endsection
 @endsection

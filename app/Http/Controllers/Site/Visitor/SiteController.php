@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site\Visitor;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -33,7 +34,8 @@ class SiteController extends Controller
     }
 
     public function services() {
-        return view('visitor.services');
+        $services =  Service::orderBy('id' , 'DESC')->get();
+        return view('visitor.services' , compact('services'));
     }
 
     public function blogs() {
@@ -51,5 +53,18 @@ class SiteController extends Controller
 
     public function ourServices() {
         return view('visitor.ourServices');
+    }
+
+    public function singleNews($id) {
+        $service = Service::find($id);
+        return view('visitor.single-news' , compact('service'));
+    }
+
+    public function facilityNews() {
+        return view('visitor.facility-news');
+    }
+
+    public function sendEmail(Request $request) {
+        return redirect()->back();
     }
 }

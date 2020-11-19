@@ -823,7 +823,8 @@
 <!--================weprovide-section-End=================-->
 <!--================weprovide-section-End=================-->
 <section style="">
-    <div class="weprovide-section" style="margin-top: 5px;">
+    <div class="weprovide-section" style="margin-top: 5px;">التمثيل
+        القانوني
         <div class="weprovide-main">
             <div class="weprovide-img" style="width:40%">
                 <div class="overlay"></div>
@@ -847,8 +848,6 @@
                     </li>
                 </ul>
             </div>
-
-
         </div>
     </div>
 </section>
@@ -899,60 +898,28 @@
         <div class="newsblog-mainpanel">
             <div class="newsblog-gridpanel">
                 <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="newsblog-group">
-                            <div class="newsblog-imgpanel">
-                                <img src="{{asset('visitor')}}/img/blog/blog-1.jpg" alt="camera-article">
-                                <span class="newsblog-date">
-                                            <strong>25</strong><small>May</small><small>2020</small>
-                                        </span>
+                    @foreach(\App\Models\News::orderBy('id' , 'DESC')->limit(6)->get() as $news)
+                        <a href="{{route('single-news'  , $news->id)}}">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="newsblog-group">
+                                    <div class="newsblog-imgpanel">
+                                        <img src="{{asset('visitor')}}/img/blog/blog-1.jpg" alt="camera-article">
+                                        {{--                                    <span class="newsblog-date">--}}
+                                        {{--                                            <strong>25</strong><small>May</small><small>2020</small>--}}
+                                        {{--                                        </span>--}}
+                                    </div>
+                                    <div class="newsblog-conents">
+                                        <ul class="newsblog-info">
+                                            <li>{{$news->created_at}}</li>
+                                            {{--                                        <li>James Smith</li>--}}
+                                            {{--                                        <li>1 comment</li>--}}
+                                        </ul>
+                                        <h3> {{\Illuminate\Support\Str::substr($news->text , 20)}}</h3>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="newsblog-conents">
-                                <ul class="newsblog-info">
-                                    <li>Feb 28, 2019</li>
-                                    <li>James Smith</li>
-                                    <li>1 comment</li>
-                                </ul>
-                                <h3> Domestic Violence in California – How a Lawyer Can Help</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="newsblog-group">
-                            <div class="newsblog-imgpanel">
-                                <img src="{{asset('visitor')}}/img/blog/blog-2.jpg" alt="camera-article">
-                                <span class="newsblog-date">
-                                            <strong>25</strong><small>May</small><small>2020</small>
-                                        </span>
-                            </div>
-                            <div class="newsblog-conents">
-                                <ul class="newsblog-info">
-                                    <li>Feb 28, 2019</li>
-                                    <li>James Smith</li>
-                                    <li>1 comment</li>
-                                </ul>
-                                <h3> Domestic Violence in California – How a Lawyer Can Help</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="newsblog-group">
-                            <div class="newsblog-imgpanel">
-                                <img src="{{asset('visitor')}}/img/blog/blog-3.jpg" alt="camera-article">
-                                <span class="newsblog-date">
-                                            <strong>25</strong><small>May</small><small>2020</small>
-                                        </span>
-                            </div>
-                            <div class="newsblog-conents">
-                                <ul class="newsblog-info">
-                                    <li>Feb 28, 2019</li>
-                                    <li>James Smith</li>
-                                    <li>1 comment</li>
-                                </ul>
-                                <h3> Domestic Violence in California – How a Lawyer Can Help</h3>
-                            </div>
-                        </div>
-                    </div>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>

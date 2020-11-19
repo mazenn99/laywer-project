@@ -29,9 +29,9 @@
                             </div>
                             <div class="footer-link">
                                 <ul>
-                                    <li><a href="index.html">الرئيسية</a></li>
-                                    <li><a href="service.html">خدماتنا</a></li>
-                                    <li><a href="blog-5.html">أخبار المنشأة</a></li>
+                                    <li><a href="{{route('home')}}">الرئيسية</a></li>
+                                    <li><a href="{{route('services')}}">خدماتنا</a></li>
+                                    <li><a href="{{route('facility-news')}}">أخبار المنشأة</a></li>
                                     <li><a href="about.html">من نحن</a></li>
                                 </ul>
                             </div>
@@ -98,7 +98,8 @@
                                 <h3>اشترك في نشرتنا البريدية</h3>
                             </div>
                             <div class="subscribe-panel">
-                                <form action="inc/sendemail.php">
+                                <form action="{{route('sendEmail')}}" method="POST">
+                                    @csrf
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="newsletter" name="name" placeholder="بريدك الالكتروني">
                                     </div>

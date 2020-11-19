@@ -33,7 +33,7 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = Article::with('user','type')->find($id);
-        $article->image = config('app.url').'article/'.$article->image;
+        $article->image = config('app.url').'article/'.$article->image ;
         $article->date = date("d-m-Y", strtotime($article->created_at));
         #return response()->json(['resourceCode' => '100', 'resourceMessage' => 'success', 'data' => $article]);
         // return response()->json(['resourceCode' => '100', 'resourceMessage' => 'success', 'data' => $article]);
